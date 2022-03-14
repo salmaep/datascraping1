@@ -36,7 +36,7 @@ for headline in obj.find_all('div',class_='bungkus_txt_headline_center'):
 
 print ('\nMenyimpan headline pada file text')
 print ('===================================')
-f=open('E:\\DATA DOKUMEN\\POLBAN\\semester 2\\Proyek 1  Pengembangan Perangkat Lunak Desktop\\Tugas\\P-Minggu 6\\scraping\\headlineScraper.txt','w')
+f=open('E:\\DATA DOKUMEN\\Program data\\XAMPP\\htdocs\\scraping\\latihan scraping\\headlineScraper.txt','w')
 for headline in obj.find_all('div',class_='bungkus_txt_headline_center'):
 	f.write(headline.find('h2').text)
 	f.write('\n')
@@ -49,7 +49,7 @@ import json
 # Deklarasi list kosong
 data=[]
 # Lokasi file json
-f=open('E:\\DATA DOKUMEN\\Program data\\XAMPP\\htdocs\\scraping\\headlineScraper.json','w')
+f=open('E:\\DATA DOKUMEN\\Program data\\XAMPP\\htdocs\\scraping\\latihan scraping\\headlineScraper.json','w')
 for headline in obj.find_all('div',class_='bungkus_txt_headline_center'):
 	# append headline ke variabel data
 	data.append({"judul":headline.find('h2').text})
